@@ -19,6 +19,18 @@ function defaultUser() {
     }
 };
 
+function noFirstName() {
+    return {
+        firstName: '',
+        lastName: 'Calavera',
+        email: getRandomEmail(),
+        telephone: '11231',
+        password: 'password',
+        confirmPassword: 'password',
+        agree: true     
+	}	
+};
+
 let TestData = function() {
     this.firstName = defaultDataRegister.firstName;
     this.lastName = defaultDataRegister.lastName;
@@ -28,12 +40,14 @@ let TestData = function() {
     this.confirmPassword = defaultDataRegister.confirmPassword;
     this.agree = defaultDataRegister.agree;
 }
+/*
 TestData.noFirstName = function() {
 this.firstName = '';
 }
-
+*/
 module.exports = { 
     defaultDataRegister, 
     defaultUser,
-    TestData
+    TestData,
+	noFirstName
 }
