@@ -19,7 +19,7 @@ class RegisterPage extends Page {   /**
     get lblError () { return $('.text-danger') }
     get alertError () { return $('.alert-danger') }
 
-    get titleSuccess () { return $('#content h2')}
+    get titleSuccess () { return $('#content h1')}
 
     /**
      * a method to encapsulate automation code to interact with the page

@@ -27,9 +27,10 @@ let TestData = function() {
     this.password = defaultDataRegister.password;
     this.confirmPassword = defaultDataRegister.confirmPassword;
     this.agree = defaultDataRegister.agree;
-}
-TestData.noFirstName = function() {
-this.firstName = '';
+
+    this.noFirstName = function() {
+        this.firstName = '';
+       };
 }
 
 module.exports = { 

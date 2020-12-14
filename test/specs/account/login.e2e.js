@@ -13,7 +13,7 @@ describe('Login Feature', () => {
 
     it('try to login with invalid credentials', () => {
 
-        const errorMessage = 'Warning: No match  for E-Mail Address and/or Password.'
+        const errorMessage = 'Warning: No match for E-Mail Address and/or Password.'
         
         let testData = defaultUser();
         testData.email = 'incorrect@email.com';
