@@ -1,4 +1,4 @@
-const { defaultDataRegister, noFirstName } = require('../../helpers/data.helper');
+const { defaultDataRegister } = require('../../helpers/data.helper');
 const { getRandomEmail } = require('../../helpers/common.helper');
 
 const RegisterPage = require('../../pageobjects/register.page');
@@ -24,11 +24,12 @@ describe('Register Feature', () => {
         
         const errorMessage = 'First Name must be between 1 and 32 characters!';
         
-        //let testData = new TestData();
-		let testData = noFirstName();
-        //console.log(testData);
-		//TestData.noFirstName();
-        
+        let testData = defaultDataRegister();
+		//console.log(testData);
+		
+        testData.firstName = ""
+		//console.log(testData);
+		
 		RegisterPage.open();
         RegisterPage.register(testData);
 		//browser.pause(30000)
